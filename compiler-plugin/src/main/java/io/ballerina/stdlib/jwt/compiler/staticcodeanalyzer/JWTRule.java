@@ -24,11 +24,8 @@ import static io.ballerina.scan.RuleKind.VULNERABILITY;
 import static io.ballerina.stdlib.jwt.compiler.staticcodeanalyzer.RuleFactory.createRule;
 
 public enum JWTRule {
-    AVOID_WEAK_CIPHER_ALGORITHMS(createRule(
-            1,
-            "JWT should be signed and verified with strong cipher algorithms",
-            VULNERABILITY)
-    );
+    AVOID_WEAK_CIPHER_ALGORITHMS(createRule(1, "JWT should be signed and verified with strong cipher " +
+            "algorithms", VULNERABILITY));
 
     private final Rule rule;
 
